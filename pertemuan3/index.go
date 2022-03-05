@@ -20,7 +20,7 @@ func main() {
 func jalan(data [3]string) {
 	for _, singleData := range data {
 		if singleData == "Go" {
-			time.Sleep(500 * time.Millisecond)
+			// time.Sleep(500 * time.Millisecond)
 			// mengassign nilai singleData ke channel newChannel
 			newChannel <- singleData
 		}
@@ -30,7 +30,7 @@ func jalan(data [3]string) {
 func lari() {
 	// untuk menampilkan channel harus menggunakan for range loop
 	for channel := range newChannel {
-		time.Sleep(100 * time.Millisecond)
+		// time.Sleep(100 * time.Millisecond)
 		fmt.Println(channel)
 	}
 }
